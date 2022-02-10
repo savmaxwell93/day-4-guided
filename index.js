@@ -18,6 +18,12 @@ app.get('/hello', (req, res) => {
     res.json({ message: 'hey there'})
 })
 
+app.get('/', (req, res) => {
+    res.send(`
+    <h1>Hello from web50</>
+    `)
+})
+
 //heroku wants to set its own port
 const PORT = process.env.PORT || 9000; 
 app.listen(PORT, () => {
